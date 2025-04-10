@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	<!-- © 1998-2025 Direct Connect -->
+	<url>
+		<loc>https://dc-protocols.github.io/</loc>
+		<priority>0.5</priority>
+		<changefreq>monthly</changefreq>
+	</url>
+	<url>
+		<loc>https://dc-protocols.github.io/NMDC.html</loc>
+		<priority>0.5</priority>
+		<changefreq>monthly</changefreq>
+	</url>
+	<url>
+		<loc>https://dc-protocols.github.io/ADC.html</loc>
+		<priority>0.5</priority>
+		<changefreq>monthly</changefreq>
+	</url>
+	<url>
+		<loc>https://dc-protocols.github.io/links.html</loc>
+		<priority>0.5</priority>
+		<changefreq>monthly</changefreq>
+	</url>
+</urlset>

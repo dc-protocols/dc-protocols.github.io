@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://dc-protocols.github.io/sitemap.xml
