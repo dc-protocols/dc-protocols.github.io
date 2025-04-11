@@ -1,2 +1,2 @@
 # dc-protocols.github.io
-Protocol documentation for Direct Connect
+Updated protocol documentation for Direct Connect
