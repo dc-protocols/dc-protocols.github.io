@@ -26,6 +26,7 @@ thead, p.table.header,
 
 body {
   margin: 1em 5% 1em 5%;
+  line-height: 200%;
 }
 
 a {
@@ -737,7 +738,7 @@ asciidoc.install(4);
 <h1>NMDC Protocol</h1>
 <span id="author">Aleksandr Zenkov</span><br />
 <span id="email"><code>&lt;<a href="mailto:webmaster@feardc.net">webmaster@feardc.net</a>&gt;</code></span><br />
-<span id="revnumber">version 1.4,</span>
+<span id="revnumber">version 1.5,</span>
 <span id="revdate">2025-04-05</span>
 <div id="toc">
   <div id="toctitle">Table of Contents</div>
@@ -760,36 +761,36 @@ asciidoc.install(4);
 <div class="ulist"><ul>
 <li>
 <p>
-Ptokax wiki: <a href="http://wiki.ptokax.org">http://wiki.ptokax.org</a>
+Verlihub NMDC page: <a href="https://www.te-home.net/?do=work&amp;id=verlihub&amp;page=nmdc">https://www.te-home.net/?do=work&amp;id=verlihub&amp;page=nmdc</a>
 </p>
 </li>
 <li>
 <p>
-TeamFair wiki: <a href="https://web.archive.org/web/20090313025627/http://www.teamfair.info/wiki/index.php?title=Main_Page">https://web.archive.org/web/20090313025627/http://www.teamfair.info/wiki/index.php?title=Main_Page</a>
+TeamFair wiki: <a href="https://github.com/dc-protocols/nmdc/tree/main/Other/TeamFair">https://github.com/dc-protocols/nmdc/tree/main/Other/TeamFair</a>
 </p>
 </li>
 <li>
 <p>
-The Nighthawk forum
+The Nighthawk forum: <a href="https://github.com/dc-protocols/nmdc/tree/main/Other/The%20NightHawk%20Forum">https://github.com/dc-protocols/nmdc/tree/main/Other/The%20NightHawk%20Forum</a>
 </p>
 </li>
 <li>
 <p>
-Mutor protocol docs: <a href="https://sourceforge.net/p/nmdc/svnroot/HEAD/tree/trunk/Other/mutor_protocoldoc.htm">https://sourceforge.net/p/nmdc/svnroot/HEAD/tree/trunk/Other/mutor_protocoldoc.htm</a>
+Protocol documentation by Mutor: <a href="https://github.com/dc-protocols/nmdc/blob/main/Other/mutor_protocoldoc.htm">https://github.com/dc-protocols/nmdc/blob/main/Other/mutor_protocoldoc.htm</a>
 </p>
 </li>
 <li>
 <p>
-Verlihub NMDC section: <a href="https://www.te-home.net/?do=work&amp;id=verlihub&amp;page=nmdc">https://www.te-home.net/?do=work&amp;id=verlihub&amp;page=nmdc</a>
+MyDC portal: <a href="http://mydc.ru/topic915.html">http://mydc.ru/topic915.html</a> &amp; <a href="http://mydc.ru/topic5095.html">http://mydc.ru/topic5095.html</a>
 </p>
 </li>
 <li>
 <p>
-MyDC portal: <a href="http://mydc.ru/topic915.html">http://mydc.ru/topic915.html</a> + <a href="http://mydc.ru/topic5095.html">http://mydc.ru/topic5095.html</a>
+Ptokax wiki: <a href="http://wiki.ptokax.org/doku.php?id=dcprotocol">http://wiki.ptokax.org/doku.php?id=dcprotocol</a>
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><p>This document was compiled on 2025-04-05 using AsciiDoc3 3.2.3 by Aleksandr Zenkov.</p></div>
+<div class="paragraph"><p>This document was compiled on 2025-04-12 using AsciiDoc3 3.2.3 by Aleksandr Zenkov.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -798,20 +799,7 @@ MyDC portal: <a href="http://mydc.ru/topic915.html">http://mydc.ru/topic915.html
 <div class="paragraph"><p>The latest draft of the next version of this document as well as intermediate
 and older versions can be downloaded from <a href="https://github.com/dc-protocols/nmdc">https://github.com/dc-protocols/nmdc</a></p></div>
 <div class="sect2">
-<h3 id="_version_1_4">3.1. Version 1.4</h3>
-<div class="paragraph"><p>Fredrik Ullner &lt;<a href="mailto:ullner@gmail">ullner@gmail</a>&gt;, 2013-12-20</p></div>
-<div class="ulist"><ul>
-<li>
-<p>
-Added $SetIcon extension
-</p>
-</li>
-<li>
-<p>
-Added note on $ADCGet&#8217;s use of ADC fields
-</p>
-</li>
-</ul></div>
+<h3 id="_version_1_5">3.1. Version 1.5</h3>
 <div class="paragraph"><p>Aleksandr Zenkov &lt;<a href="mailto:webmaster@feardc.net">webmaster@feardc.net</a>&gt;, 2025-04-05</p></div>
 <div class="ulist"><ul>
 <li>
@@ -877,8 +865,24 @@ Fixed $MyINFO status bytes
 </ul></div>
 </div>
 <div class="sect2">
-<h3 id="_version_1_3">3.2. Version 1.3</h3>
-<div class="paragraph"><p>Fredrik Ullner &lt;<a href="mailto:ullner@gmail">ullner@gmail</a>&gt;, 2013-03-09</p></div>
+<h3 id="_version_1_4">3.2. Version 1.4</h3>
+<div class="paragraph"><p>Fredrik Ullner &lt;<a href="mailto:ullner@gmail.com">ullner@gmail.com</a>&gt;, 2013-12-20</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Added $SetIcon extension
+</p>
+</li>
+<li>
+<p>
+Added note on $ADCGet&#8217;s use of ADC fields
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_version_1_3">3.3. Version 1.3</h3>
+<div class="paragraph"><p>Fredrik Ullner &lt;<a href="mailto:ullner@gmail.com">ullner@gmail.com</a>&gt;, 2013-03-09</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -943,7 +947,7 @@ Added URI scheme description
 </ul></div>
 </div>
 <div class="sect2">
-<h3 id="_version_1_2">3.3. Version 1.2</h3>
+<h3 id="_version_1_2">3.4. Version 1.2</h3>
 <div class="paragraph"><p>Fredrik Ullner &lt;<a href="mailto:ullner@gmail.com">ullner@gmail.com</a>&gt;, 2013-01-16</p></div>
 <div class="ulist"><ul>
 <li>
@@ -989,7 +993,7 @@ Changed $MyINFO according to how the flag is used.
 </ul></div>
 </div>
 <div class="sect2">
-<h3 id="_version_1_1">3.4. Version 1.1</h3>
+<h3 id="_version_1_1">3.5. Version 1.1</h3>
 <div class="paragraph"><p>Fredrik Ullner &lt;<a href="mailto:ullner@gmail.com">ullner@gmail.com</a>&gt;, 2013-01-02</p></div>
 <div class="ulist"><ul>
 <li>
@@ -1000,7 +1004,7 @@ Added additional commands and extensions to document
 </ul></div>
 </div>
 <div class="sect2">
-<h3 id="_version_1_0">3.5. Version 1.0</h3>
+<h3 id="_version_1_0">3.6. Version 1.0</h3>
 <div class="paragraph"><p>Fredrik Ullner &lt;<a href="mailto:ullner@gmail.com">ullner@gmail.com</a>&gt;</p></div>
 <div class="ulist"><ul>
 <li>
@@ -1035,7 +1039,7 @@ Command names and parameters use single space (' ') and additional dollar signs 
 </li>
 <li>
 <p>
-There is no standardization on code page to use. The local charset of the computer system is commonly used. The original implementation used win.1252.
+There is no standardization on code page to use. The local charset of the computer system is commonly used. The original implementation used Windown-1252.
 </p>
 </li>
 <li>
@@ -1045,7 +1049,7 @@ Hub port defaults to 411. The client should then try 412, 413 etc.
 </li>
 <li>
 <p>
-Client - Client port defaults to 412.
+Client port defaults to 412.
 </p>
 </li>
 <li>
@@ -1116,7 +1120,7 @@ The key aspect here is the two phrases "is kicking" and "because:". Including th
 <div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.881Ref=example.com:411</code></pre>
+<pre><code>$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.882Ref=example.com:411</code></pre>
 </div></div>
 </div></div>
 </div>
@@ -1179,7 +1183,7 @@ cellspacing="0" cellpadding="4">
 </div></div>
 </div>
 <div class="sect4">
-<h5 id="_method_2">Method 2</h5>
+<h5 id="_method_2_most_common">Method 2 (most common)</h5>
 <div class="paragraph"><p>By using the HTML equivalent of the character.</p></div>
 <div class="paragraph"><p>This escape sequence was created in and is used by DC++.</p></div>
 <div class="paragraph"><p>Note that DC++ uses the first method for the $Key/$Lock sequence. DC++ uses this method for displayment purposes (e.g. chat messages).</p></div>
@@ -1262,9 +1266,9 @@ construction to cause a processing client to exhaust its memory or
 address-space capacity. Likewise, even non-malicious filelists can
 grow arbitrarily large such that in combination with other memory
 requirements of client software, similar exhaustion occurs. Client
-software therefore SHOULD bound bzip2 decompression memory usage and
+software therefore <em>SHOULD</em> bound bzip2 decompression memory usage and
 use streaming XML APIs to process filelists.</p></div>
-<div class="paragraph"><p>See <span class="footnote" id="_footnote_DC++ 0.75 and older vulnerable to bzip2 filelist bomb"><br />[<a href="https://dcpp.wordpress.com/2010/03/12/dc-0-75-and-older-vulnerable-to-bzip2-filelist-bomb/">https://dcpp.wordpress.com/2010/03/12/dc-0-75-and-older-vulnerable-to-bzip2-filelist-bomb/</a>]<br /></span> for more information.</p></div>
+<div class="paragraph"><p>See <a href="https://dcpp.wordpress.com/2010/03/12/dc-0-75-and-older-vulnerable-to-bzip2-filelist-bomb/">DC++ 0.75 and older vulnerable to bzip2 filelist bomb</a> for more information.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_excessive_local_storage_consumption">4.2.4. Excessive Local Storage Consumption</h4>
@@ -1278,19 +1282,22 @@ denials of service resulting from exceeding them.</p></div>
 </div>
 <div class="sect2">
 <h3 id="_uri_scheme">4.3. URI scheme</h3>
-<div class="paragraph"><p>See the URI scheme document following this document.</p></div>
+<div class="paragraph"><p>See the <strong>nmdc-uri-scheme.txt</strong> following this document.</p></div>
 </div>
 <div class="sect2">
 <h3 id="_commands">4.4. Commands</h3>
 <div class="sect3">
 <h4 id="_chat_message">4.4.1. Chat message</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>&lt;nick&gt; message|</code></pre>
+<pre><code>&lt;Nick&gt; Message|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Hub &#8594; Client, Hub &#8594; Client</p></div>
-<div class="paragraph"><p>Will send a chat message by <em>nick</em>. The hub should broadcast the message to all clients if a client send this.</p></div>
-<div class="paragraph"><p>Note that the brackets (&lt; and &gt;) are required. Some implementations allow spaces in the nickname; be aware that other implementations may simply search for the first occurrence of a space. If the chat message contain a pipe, it should be replaced by its HTML equivalent.</p></div>
+<div class="paragraph"><p>Will send a chat message by <strong>Nick</strong>. The hub should broadcast the message to all clients if a client send this.</p></div>
+<div class="paragraph"><p>Note: The brackets (&lt; and &gt;) are required. Some implementations allow spaces in the nickname; be aware that other implementations may simply search for the first occurrence of a space. If the chat message contain a pipe, it should be replaced by its HTML equivalent.</p></div>
 <div class="paragraph"><p>Example:</p></div>
 <div class="exampleblock">
 <div class="content">
@@ -1301,13 +1308,17 @@ denials of service resulting from exceeding them.</p></div>
 </div></div>
 </div>
 <div class="sect3">
-<h4 id="_to">4.4.2. $To</h4>
+<h4 id="_to">4.4.2. $To:</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>$To: othernick From: nick $&lt;nick&gt; message|</code></pre>
+<pre><code>$To: OtherNick From: Nick $&lt;Nick&gt; Message|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Hub &#8594; Client, Hub &#8594; Client</p></div>
 <div class="paragraph"><p>Will send a private message from one user to another user. The same rules as a basic chat message apply.</p></div>
+<div class="paragraph"><p>Note: The colon at the end of command, it must be present.</p></div>
 <div class="paragraph"><p>Example:</p></div>
 <div class="exampleblock">
 <div class="content">
@@ -1319,9 +1330,12 @@ denials of service resulting from exceeding them.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_connecttome">4.4.3. $ConnectToMe</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>$ConnectToMe RemoteNick SenderIp:SenderPort</code></pre>
+<pre><code>$ConnectToMe RemoteNick SenderIp:SenderPort|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Hub &#8594; Client</p></div>
 <div class="paragraph"><p>Request that remotenick connect to the sending user for an active TCP connection for file transfers. Clients sending this must allow incoming TCP connections. There is no default port.</p></div>
@@ -1335,9 +1349,12 @@ denials of service resulting from exceeding them.</p></div>
 </div></div>
 <div class="paragraph"><p>Note that the above is for older clients.</p></div>
 <div class="paragraph"><p>Newer versions of NMDC client include the sender&#8217;s nick as well (but may not be compatible with all implementations);</p></div>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>$ConnectToMe SenderNick RemoteNick SenderIp:SenderPort</code></pre>
+<pre><code>$ConnectToMe SenderNick RemoteNick SenderIp:SenderPort|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Example:</p></div>
 <div class="exampleblock">
@@ -1350,12 +1367,15 @@ denials of service resulting from exceeding them.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_revconnecttome">4.4.4. $RevConnectToMe</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre><code>$RevConnectToMe SenderNick RemoteNick|</code></pre>
 </div></div>
+</div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Hub &#8594; Client</p></div>
-<div class="paragraph"><p>Request that the remotenick send a ConnectToMe back to SenderNick. Clients sending do not allow incoming TCP connections whereas the remote user does (or should).</p></div>
+<div class="paragraph"><p>Request that the remotenick send a <strong>$ConnectToMe</strong> back to <strong>SenderNick</strong>. Clients sending do not allow incoming TCP connections whereas the remote user does (or should).</p></div>
 <div class="paragraph"><p>Example:</p></div>
 <div class="exampleblock">
 <div class="content">
@@ -1367,27 +1387,35 @@ denials of service resulting from exceeding them.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_ping">4.4.5. $Ping</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>$Ping sender_ip:sender_port|</code></pre>
+<pre><code>$Ping SenderIp:SenderPort|</code></pre>
 </div></div>
-<div class="paragraph"><p>sender_ip is the IP address of the remote client.</p></div>
-<div class="paragraph"><p>sender_port is the port of the remote client that is being listened to.</p></div>
+</div></div>
+<div class="paragraph"><p><strong>SenderIp</strong> is the IP address of the remote client. <strong>SenderPort</strong> is the port of the remote client that is being listened to.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_getpass">4.4.6. $GetPass</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre><code>$GetPass|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Hub &#8594; Client</p></div>
 <div class="paragraph"><p>Request that the client send a password that correspond to a user account (matched by the user&#8217;s nick name).</p></div>
 </div>
 <div class="sect3">
 <h4 id="_mypass">4.4.7. $MyPass</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre><code>$MyPass password|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Hub</p></div>
 <div class="paragraph"><p>Providing the password (in plain text) to the hub after a request. Implementations should be aware of potential pipe and dollar signs in the password.</p></div>
@@ -1402,9 +1430,12 @@ denials of service resulting from exceeding them.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_logedin">4.4.8. $LogedIn</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre><code>$LogedIn nick|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Hub &#8594; Client</p></div>
 <div class="paragraph"><p>Sent to users who successfully log in. Note that the message should only be sent to operators. Note that some implementations do not use this command. The spelling of this command is not a mistake.</p></div>
@@ -1419,13 +1450,15 @@ denials of service resulting from exceeding them.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_get">4.4.9. $Get</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>$Get file$offset|</code></pre>
+<pre><code>$Get File$Offset|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Client</p></div>
-<div class="paragraph"><p>file is the remote location (including path) of the file.</p></div>
-<div class="paragraph"><p>offset is the byte offset to start at for resuming files.</p></div>
+<div class="paragraph"><p><strong>File</strong> is the remote location (including path) of the file. <strong>Offset</strong> is the byte offset to start at for resuming files.</p></div>
 <div class="paragraph"><p>Example:</p></div>
 <div class="exampleblock">
 <div class="content">
@@ -1437,64 +1470,79 @@ denials of service resulting from exceeding them.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_send">4.4.10. $Send</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre><code>$Send|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Client</p></div>
 <div class="paragraph"><p>This is used as a way to specify that the file should be sent. The uploader should proceed to stream the amount of bytes requested previously.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_provide_file_size">4.4.11. Provide file size</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre><code>$FileLength file_size|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Client</p></div>
 <div class="paragraph"><p>This command is used as a way to provide the size of the file requested.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_getlistlen">4.4.12. $GetListLen</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre><code>$GetListLen|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Client</p></div>
 <div class="paragraph"><p>Get file list size.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_listlen">4.4.13. $ListLen</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre><code>$ListLen file_size|</code></pre>
+</div></div>
 </div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Client</p></div>
 <div class="paragraph"><p>This command is used as a way to provide the size of the file list of the client.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_direction">4.4.14. $Direction</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="literalblock">
 <div class="content">
 <pre><code>$Direction direction number|</code></pre>
 </div></div>
+</div></div>
 <div class="paragraph"><p>Contexts: Client &#8594; Client</p></div>
 <div class="paragraph"><p>This command is used as a way to decide which party should be allowed to download.</p></div>
-<div class="paragraph"><p>The direction is either <em>Upload</em> or <em>Download</em>, depending on whether the connection request is a ConnectToMe or ReverseConnectToMe.</p></div>
-<div class="paragraph"><p>The number is a random number (above 0), typically between 1 and 32767. If both clients want to download, the client with the highest number gets to start downloading first. If the numbers are equal, the connection is closed.</p></div>
+<div class="paragraph"><p>The direction is either <strong>Upload</strong> or <strong>Download</strong>, depending on whether the connection request is a ConnectToMe or RevConnectToMe.</p></div>
+<div class="paragraph"><p>The number is a random number (above 0), typically between <strong>1</strong> and <strong>32767</strong>. If both clients want to download, the client with the highest number gets to start downloading first. If the numbers are equal, the connection is closed.</p></div>
 <div class="paragraph"><p>This command should be sent;</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
-After a $Key command or
+After a <strong>$Key</strong> command or
 </p>
 </li>
 <li>
 <p>
-After a $Lock command with EXTENDED information
+After a <strong>$Lock</strong> command with <strong>EXTENDED</strong> information
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><p>I.e., if the $Lock is EXTENDED, $Direction MUST be sent after the $Lock command and not the $Key command.</p></div>
+<div class="paragraph"><p>I.e., if the <strong>$Lock</strong> is <strong>EXTENDED</strong>, <strong>$Direction</strong> <em>MUST</em> be sent after the $Lock command and not the $Key command.</p></div>
 <div class="paragraph"><p>Implementation note: The highest number DC++ sends is 32767 (2^15-1, 0x7FFF) as the Neo-Modus Direct Connect client will disconnect if it receives a higher number. Clients can send a higher value, in risk of losing compatibility.</p></div>
 <div class="paragraph"><p>Implementation note: A potential bug, that may be fixed, in DC++ revolved around the following circumstance;</p></div>
 <div class="ulist"><ul>
@@ -1972,7 +2020,7 @@ cellspacing="0" cellpadding="4">
 <div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>&lt;++ V:0.881,M:P,H:0/1/0,S:2&gt;</code></pre>
+<pre><code>&lt;++ V:0.882,M:P,H:0/1/0,S:2&gt;</code></pre>
 </div></div>
 </div></div>
 <div class="ulist"><ul>
@@ -2019,7 +2067,7 @@ Note that the example uses <em>0x31</em> for signaling the flag as <em>Normal</e
 <div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>$MyINFO $ALL johndoe &lt;++ V:0.881,M:P,H:0/1/0,S:2&gt;$ $1000x31$example@example.com$1234$\|</code></pre>
+<pre><code>$MyINFO $ALL johndoe &lt;++ V:0.882,M:P,H:0/1/0,S:2&gt;$ $1000x31$example@example.com$1234$\|</code></pre>
 </div></div>
 </div></div>
 </div>
@@ -2222,7 +2270,7 @@ See $Supports for the use of EXTENDED.</p></div>
 <div class="content">
 <div class="literalblock">
 <div class="content">
-<pre><code>$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.881|</code></pre>
+<pre><code>$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.882|</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
@@ -3327,7 +3375,7 @@ cellspacing="0" cellpadding="4">
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"></p></td>
-<td align="left" valign="top"><p class="table">$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.881|</p></td>
+<td align="left" valign="top"><p class="table">$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.882|</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">$MyNick john|</p></td>
@@ -3479,7 +3527,7 @@ $ConnectToMe Client2 192.168.0.2:412R|</code></pre>
 <div class="content">
 <pre><code>$MaxedOut queue_position|</code></pre>
 </div></div>
-<div class="paragraph"><p>This feature is a support for a queue numbering system for client-client connections. See <span class="footnote" id="_footnote_ADC-Ext QP"><br />[<a href="http://adc.sourceforge.net/ADC-EXT.html#_qp_upload_queue_notification">http://adc.sourceforge.net/ADC-EXT.html#_qp_upload_queue_notification</a>]<br /></span> for further information on the ADC equivalent.</p></div>
+<div class="paragraph"><p>This feature is a support for a queue numbering system for client-client connections. See <span class="footnote" id="_footnote_ADC-Ext QP"><br />[<a href="https://dc-protocols.github.io/ADC-EXT.html#_qp_upload_queue_notification">https://dc-protocols.github.io/ADC-EXT.html#_qp_upload_queue_notification</a>]<br /></span> for further information on the ADC equivalent.</p></div>
 <div class="paragraph"><p>This feature extends $MaxedOut by adding a number after it.</p></div>
 <div class="paragraph"><p>Note that there is no feature to announce in $Supports.</p></div>
 <div class="paragraph"><p>Example:</p></div>
@@ -3497,7 +3545,7 @@ $ConnectToMe Client2 192.168.0.2:412R|</code></pre>
 <div class="content">
 <pre><code>$FailOver [host[,host]]|</code></pre>
 </div></div>
-<div class="paragraph"><p>This feature is used to indicate support for providing alternative hub addresses in the event that the hub is unavailable. See <span class="footnote" id="_footnote_ADC-Ext FO"><br />[<a href="http://adc.sourceforge.net/ADC-EXT.html#_fo_failover_hub_addresses">http://adc.sourceforge.net/ADC-EXT.html#_fo_failover_hub_addresses</a>]<br /></span> for further information on the ADC equivalent.</p></div>
+<div class="paragraph"><p>This feature is used to indicate support for providing alternative hub addresses in the event that the hub is unavailable. See <span class="footnote" id="_footnote_ADC-Ext FO"><br />[<a href="https://dc-protocols.github.io/ADC-EXT.html#_fo_failover_hub_addresses">https://dc-protocols.github.io/ADC-EXT.html#_fo_failover_hub_addresses</a>]<br /></span> for further information on the ADC equivalent.</p></div>
 <div class="paragraph"><p>Used a comma (,) to separate hub addresses.</p></div>
 <div class="paragraph"><p>The command can be sent at any time by the hub, overwriting or replacing the addresses of the previous command. An empty command (no hosts) clears the list of alternative addresses.</p></div>
 <div class="paragraph"><p>Add FailOver to the $Supports to indicate support for this.</p></div>
@@ -3739,7 +3787,7 @@ cellspacing="0" cellpadding="4">
 <td align="left" valign="top"><p class="table"></p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table">$MyINFO $ALL johndoe &lt;++ V:0.881,M:P,H:0/1/0,S:2&gt;$ $1000x31$<a href="mailto:johndoe@example.com">johndoe@example.com</a>$12345$|</p></td>
+<td align="left" valign="top"><p class="table">$MyINFO $ALL johndoe &lt;++ V:0.882,M:P,H:0/1/0,S:2&gt;$ $1000x31$<a href="mailto:johndoe@example.com">johndoe@example.com</a>$12345$|</p></td>
 <td align="left" valign="top"><p class="table"></p></td>
 </tr>
 <tr>
@@ -3764,7 +3812,7 @@ cellspacing="0" cellpadding="4">
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"></p></td>
-<td align="left" valign="top"><p class="table">$MyINFO $ALL aaa &lt;++ V:0.881,M:P,H:0/0/1,S:5&gt;$ $500x31$<a href="mailto:aaa@example.com">aaa@example.com</a>$56789$|</p></td>
+<td align="left" valign="top"><p class="table">$MyINFO $ALL aaa &lt;++ V:0.882,M:P,H:0/0/1,S:5&gt;$ $500x31$<a href="mailto:aaa@example.com">aaa@example.com</a>$56789$|</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"></p></td>
@@ -3808,12 +3856,12 @@ cellspacing="0" cellpadding="4">
 <td align="left" valign="top"><p class="table"></p></td>
 </tr>
 <tr>
-<td align="left" valign="top"><p class="table">$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.881|</p></td>
+<td align="left" valign="top"><p class="table">$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.882|</p></td>
 <td align="left" valign="top"><p class="table"></p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table"></p></td>
-<td align="left" valign="top"><p class="table">$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.881Ref=dchub://example.org:411|</p></td>
+<td align="left" valign="top"><p class="table">$Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.882Ref=dchub://example.org:411|</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">$Supports MiniSlots XmlBZList ADCGet TTHL TTHF ZLIG|</p></td>
@@ -3860,11 +3908,10 @@ cellspacing="0" cellpadding="4">
 </div>
 </div>
 </div>
-<div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Version 1.4<br />
-Last updated 2025-04-05 13:33:06 CEST
+Version 1.5<br />
+Last updated 2025-04-12 08:35:58 CEST
 </div>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc3 3.2.3" />
-<title>ADC - Protocol Release Description</title>
+<title>ADC Recommendations</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc3 xhtml11 and html5 backends */
 
@@ -729,39 +729,32 @@ install: function(toclevels) {
 }
 
 }
-asciidoc.install(4);
+asciidoc.install();
 /*]]>*/
 </script>
 </head>
 <body class="article">
 <div id="header">
-<h1>ADC - Protocol Release Description</h1>
-<span id="author">Fredrik Ullner,</span><br />
-<span id="email"><code>&lt;<a href="mailto:ullner@gmail.com">ullner@gmail.com</a>&gt;</code></span><br />
-<span id="revnumber">version 1.0.0,</span>
-<span id="revdate">June 2013</span>
-<div id="toc">
-  <div id="toctitle">Table of Contents</div>
-  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
-</div>
+<h1>ADC Recommendations</h1>
+<span id="author">1.0.1, UNRELEASED</span><br />
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_abstract">1. Abstract</h2>
+<h2 id="_abstract">Abstract</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>New versions of ADC are released on a continuous basis. This document intend to provide a resource for those who are active in the ADC developent process and particularly the release process. This document, Protocol Release Description (PRD), describes the necessary changes and updates to the ADC network and associated resources once a new version of ADC is about to be released and subsequently is released.</p></div>
-<div class="paragraph"><p>This document apply to at least ADC.txt and ADC-EXT.txt but may be extended for any other document as well.</p></div>
+<div class="paragraph"><p>These are the services for the ONID command. See ADC-Ext for the ONID specification.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_version_history">2. Version history</h2>
+<h2 id="_version_history">Version history</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>The latest draft of the next version of this document as well as intermediate
 and older versions can be downloaded from
-$URL: <a href="https://github.com/dc-protocols/adc/blob/main/ADC-PRD.txt">https://github.com/dc-protocols/adc/blob/main/ADC-PRD.txt</a> $.
-This version corresponds to $Revision: 98 $.</p></div>
+$URL: <a href="https://github.com/dc-protocols/adc/blob/main/ADC-OID.txt">https://github.com/dc-protocols/adc/blob/main/ADC-OID.txt</a> $.</p></div>
+<div class="paragraph"><p>This version corresponds to $Revision: 1 $.</p></div>
 <div class="sect2">
-<h3 id="_version_1_0_0_unreleased">2.1. Version 1.0.0, UNRELEASED</h3>
+<h3 id="_version_1_0_0">Version 1.0.0</h3>
+<div class="paragraph"><p>Fredrik Ullner &lt;<a href="mailto:ullner@gmail.com">ullner@gmail.com</a>&gt;</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -770,110 +763,288 @@ Initial release
 </li>
 </ul></div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changes_prior_to_release">3. Changes prior to release</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>This chapter is about the necessary changes that should be applied to the referenced document before a new version is released.</p></div>
-<div class="paragraph"><p>These items should be performed in order of appearance.</p></div>
 <div class="sect2">
-<h3 id="_document_version_and_contact_information">3.1. Document version and contact information</h3>
-<div class="paragraph"><p>The version information provided in the document&#8217;s top should be in the form of;</p></div>
-<div class="paragraph"><p>AUTHOR, &lt;MAIL&gt;
-version XYZ, MONTH YEAR</p></div>
-<div class="paragraph"><p>Example:</p></div>
-<div class="exampleblock">
-<div class="content">
-<div class="literalblock">
-<div class="content">
-<pre><code>John Doe, &lt;doe@example.com&gt;
-version 0.0.1, January 1970</code></pre>
-</div></div>
-</div></div>
-<div class="paragraph"><p>The document version provided in the document&#8217;s versin history information should be in the form of;</p></div>
-<div class="paragraph"><p>Version XYZ, YYYY-MM-DD</p></div>
-<div class="paragraph"><p>AUTHOR &lt;MAIL&gt;</p></div>
+<h3 id="_version_1_0_1_unreleased">Version 1.0.1, UNRELEASED</h3>
 <div class="ulist"><ul>
 <li>
 <p>
-Change1
+Added TrackMania
 </p>
 </li>
 <li>
 <p>
-Change2
+Updated LoL regions
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><p>Example:</p></div>
-<div class="exampleblock">
-<div class="content">
-<div class="literalblock">
-<div class="content">
-<pre><code>Version 0.0.1, 1970-01-20
-John Doe &lt;doe@example.com&gt;
-* Initial release
-* Added history information</code></pre>
-</div></div>
-</div></div>
-</div>
-<div class="sect2">
-<h3 id="_version_control">3.2. Version control</h3>
-<div class="paragraph"><p>The document shall be checked in to the (software) version control system with the validated information.</p></div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_changes_after_release">4. Changes after release</h2>
+<h2 id="_services">Services</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>This chapter is about the necessary changes that should performed once a new version is released.</p></div>
-<div class="paragraph"><p>These items need not be performed in order, except when certain items directly have dependencies.</p></div>
+<div class="paragraph"><p>The service names are all case-insensitive. They are written here as lower-case.</p></div>
 <div class="sect2">
-<h3 id="_document_generation">4.1. Document generation</h3>
-<div class="paragraph"><p>The document may be in the form of a ASCIIDoc file. If so, the file should have an accomponaying ".conf" file. With ASCIIDoc, run the following command;</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><code>asciidoc3 file.txt</code></pre>
-</div></div>
-<div class="paragraph"><p>This will generate the file "file.html".</p></div>
-<div class="paragraph"><p>Example</p></div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph"><p>asciidoc3 ADC.txt</p></div>
-</div></div>
+<h3 id="_dcbase">DCBase</h3>
+<div class="paragraph"><p>Service name: dcbase</p></div>
+<div class="paragraph"><p>Required parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">ID</p></td>
+<td align="left" valign="top"><p class="table">The DCBase forum member numeric identifier.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_manage_web_space">4.2. Manage web space</h3>
-<div class="paragraph"><p>The file generated (if done) shall be uploaded the web space of the ADC project. This file should be put in the /versions subdirectory.</p></div>
-<div class="paragraph"><p>The file versions/index.html should be updated to include the new version.</p></div>
-<div class="paragraph"><p>If a file is located at another place at the web space and is (sym or hard) linked to the previous version, then the link should be updated to point to the new version.</p></div>
-<div class="paragraph"><p>The "news" section should be updated to include the new version. The information about the version should be the content provided in the version history section in the document.</p></div>
-<div class="paragraph"><p>Any other link to the previous version should be updated to point to the new version.</p></div>
+<h3 id="_facebook">Facebook</h3>
+<div class="paragraph"><p>Service name: facebook</p></div>
+<div class="paragraph"><p>Required parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">ID</p></td>
+<td align="left" valign="top"><p class="table">The public Facebook ID (that appears in a profile page&#8217;s URL).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>Optional parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">NI</p></td>
+<td align="left" valign="top"><p class="table">The friendly name.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_manage_forum">4.3. Manage forum</h3>
-<div class="paragraph"><p>The forum shall be updated to manage the new version. All threads related to the new version are typically at the subform Protocols/Advanced Direct Connection/Protocol ideas.</p></div>
-<div class="paragraph"><p>Each thread that has a note in the form of [Future DOCUMENT X.Y.Z] shall be changed to [DOCUMENT X.Y.Z].</p></div>
-<div class="paragraph"><p>All threads marked [DOCUMENT X.Y.Z] shall be moved to the sub-forum Protocols/Advanced Direct Connection/Pushed ideas. This will clear the current discussions list from content that are already approved and released.</p></div>
+<h3 id="_google">Google</h3>
+<div class="paragraph"><p>Service name: google</p></div>
+<div class="paragraph"><p>Required parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">EM</p></td>
+<td align="left" valign="top"><p class="table">The Google e-mail.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_manage_blog">4.4. Manage blog</h3>
-<div class="paragraph"><p>A post shall be created at the blog announcing a new version is released. The post should contain a link to the specific file at the web space (not a link). The post should contain a list of each item of change, where each item should be explored for how it affects developers and users.</p></div>
+<h3 id="_league_of_legends">League of Legends</h3>
+<div class="paragraph"><p>Service name: lol</p></div>
+<div class="paragraph"><p>Required parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">SU</p></td>
+<td align="left" valign="top"><p class="table">The League of Legends summoner name.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">SE</p></td>
+<td align="left" valign="top"><p class="table">The server identifier.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>The server identifier may be one of the following:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<thead>
+<tr>
+<th align="left" valign="top">Identifier </th>
+<th align="left" valign="top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">br</p></td>
+<td align="left" valign="top"><p class="table">Brazil</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">eune</p></td>
+<td align="left" valign="top"><p class="table">EU Nordic and East</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">euw</p></td>
+<td align="left" valign="top"><p class="table">EU West</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">kr</p></td>
+<td align="left" valign="top"><p class="table">Korea</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">lan</p></td>
+<td align="left" valign="top"><p class="table">Latin America North</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">las</p></td>
+<td align="left" valign="top"><p class="table">Latin America South</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">na</p></td>
+<td align="left" valign="top"><p class="table">North America</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">oce</p></td>
+<td align="left" valign="top"><p class="table">Oceania</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">tr</p></td>
+<td align="left" valign="top"><p class="table">Turkey</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">ru</p></td>
+<td align="left" valign="top"><p class="table">Russia</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_manage_wiki">4.5. Manage wiki</h3>
-<div class="paragraph"><p>The wiki shall be updated to not list "proposals" that are approved and in the new version, similar to the forum.</p></div>
+<h3 id="_microsoft_live">Microsoft Live</h3>
+<div class="paragraph"><p>Service name: mslive</p></div>
+<div class="paragraph"><p>Required parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">EM</p></td>
+<td align="left" valign="top"><p class="table">The Microsoft Live e-mail.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_manage_other_direct_connect_resources">4.6. Manage other Direct Connect resources</h3>
-<div class="paragraph"><p>The service "Timetoast" describe a view of the versions and when they were released. This service shall be updated to include the new version and its date of release. If the service is shown on the web space, it will automatically update itself.</p></div>
-<div class="paragraph"><p>The topic of the DCDev hub shall be updated to link to the new version.</p></div>
-<div class="paragraph"><p>The new version shall be announced (in a non-invasive manner) on Twitter and other resources where developers frequent.</p></div>
+<h3 id="_playstation_network">Playstation Network</h3>
+<div class="paragraph"><p>Service name: psn</p></div>
+<div class="paragraph"><p>Required parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">ID</p></td>
+<td align="left" valign="top"><p class="table">The Playstation Network ID</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_manage_external_resources">4.7. Manage external resources</h3>
-<div class="paragraph"><p>The <a href="http://en.wikipedia.org/wiki/Advanced_Direct_Connect">Wikipedia article</a> on ADC shall be updated to specify the new version.</p></div>
+<h3 id="_twitter">Twitter</h3>
+<div class="paragraph"><p>Service name: twitter</p></div>
+<div class="paragraph"><p>Required parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">ID</p></td>
+<td align="left" valign="top"><p class="table">The Twitter profile ID (that appears in a profile page&#8217;s URL).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>Optional parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">NI</p></td>
+<td align="left" valign="top"><p class="table">The nick name.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_yahoo">Yahoo!</h3>
+<div class="paragraph"><p>Service name: yahoo</p></div>
+<div class="paragraph"><p>Required parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">EM</p></td>
+<td align="left" valign="top"><p class="table">The Yahoo! e-mail.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_trackmania">TrackMania</h3>
+<div class="paragraph"><p>Service name: trackmania</p></div>
+<div class="paragraph"><p>Required parameters:</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">NI</p></td>
+<td align="left" valign="top"><p class="table">The TrackMania nick name.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -881,8 +1052,7 @@ John Doe &lt;doe@example.com&gt;
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0.0<br />
-Last updated 2025-04-12 08:21:44 CEST
+Last updated 2025-04-12 08:20:11 CEST
 </div>
 </div>
 </body>
