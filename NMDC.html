@@ -2701,7 +2701,7 @@ Description changes often on some hubs so this helps with updating it.</p></div>
 <div class="paragraph"><p>Hubowner login is meant to help hubowners to edit information about their hub directly from the hublist portal.
 It is usually an email address where the account/password information should be sent.</p></div>
 <div class="paragraph"><p>Hub category provides information about hub categorization such as Public, Private, Chatonly, Failover and Redirect.</p></div>
-<div class="paragraph"><p>Character encoding provides information about character encoding currently used on hub, this helps a hublist to display correctly encoded hub information such as hub name, description, $MyINFOs, when converting texts to UTF-8.</p></div>
+<div class="paragraph"><p>Character encoding provides information about character encoding currently used on hub, this helps a hublist to display correctly encoded hub information such as hub name, description, <strong>$MyINFO</strong>, when converting texts to UTF-8.</p></div>
 <div class="paragraph"><p>Common encodings are: CP1250, CP1251, CP1252, CP1253, GB18030 and UTF-8, but are not limited to.</p></div>
 <div class="paragraph"><p>If the hub address is 127.0.0.1, a hublist pinger will/is supposed to remove the hub from its database.</p></div>
 <div class="paragraph"><p>Add <strong>HubINFO</strong> to the <strong>$Supports</strong> to indicate support for this.</p></div>
@@ -2861,7 +2861,7 @@ cellspacing="0" cellpadding="4">
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">h (104)</p></td>
-<td align="left" valign="top"><p class="table">Hub count, x/y/z (where x is the number of hubs as a normal user, y as the number of hubs as registered and z as the number of hubs as operator)</p></td>
+<td align="left" valign="top"><p class="table">Hub count, "x/y/z" - where "x" is the number of hubs as a normal user, "y" as the number of hubs as registered and "z" as the number of hubs as operator</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">s (115)</p></td>
@@ -2873,15 +2873,15 @@ cellspacing="0" cellpadding="4">
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">l (108)</p></td>
-<td align="left" valign="top"><p class="table">Bandwidth limit (L: and B: in $MyINFO)</p></td>
+<td align="left" valign="top"><p class="table">Bandwidth limit, "L:" and "B:" in $MyINFO</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">o (111)</p></td>
-<td align="left" valign="top"><p class="table">O: in $MyINFO</p></td>
+<td align="left" valign="top"><p class="table">"O:" in $MyINFO</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">r (114)</p></td>
-<td align="left" valign="top"><p class="table">R: in $MyINFO</p></td>
+<td align="left" valign="top"><p class="table">"R:" in $MyINFO</p></td>
 </tr>
 </tbody>
 </table>
@@ -2949,14 +2949,14 @@ cellspacing="0" cellpadding="4">
 </tbody>
 </table>
 </div>
-<div class="paragraph"><p>Bit 5 and Bit 6 of the 32-bit status flag are used to indicate wether a user is an OP or wether the $IN string send by the hubsoft belongs to a bot.
+<div class="paragraph"><p>Bit 5 and Bit 6 of the 32-bit status flag are used to indicate whether a user is an OP or whether the <strong>$IN</strong> string send by the hubsoft belongs to a bot.
 These values are read-only and should never be changed by a client.
 The hubsoft must disconnect for this.
 If a client connects and has successfully logged in with the correct password, the hubsoft will set bit 5 of the status flag and sends this part to all connected users, including the newly connected OP.
 The connecting client must save the status flag it received from the hub and use it when updating status such as away and fireball.
 However, as said, it is not allowed to set or reset bit 5 and bit 6 of the status flag.</p></div>
 <div class="paragraph"><p>Bit 7 of the 32-bit status flag indicates if the client is in DND-mode (Do-Not-Disturb).
-Unlike Away mode, this mode will prevent the client to receive any PM&#8217;s.
+Unlike "Away" mode, this mode will prevent the client to receive any PMs.
 Clients are responsible themselves for setting/resetting this bit.
 Once this bit is set, and the hub receives a <strong>$To:</strong> string for a client in DND-mode, the hub must ignore the <strong>$To:</strong> and reply to the sender with a message that the receiver is in DND-Mode.
 A client having this bit set, should automatically reset this bit when sending a pm itself.
@@ -3006,7 +3006,7 @@ $MCTo: peter $john I like dogs|</code></pre>
 <div class="paragraph"><p>Add <strong>NickChange</strong> to the <strong>$Supports</strong> to indicate support for this.</p></div>
 <div class="paragraph"><p>The client will have to update its own <strong>$MyINFO</strong> string and user list.</p></div>
 <div class="paragraph"><p>The hub will will send <strong>$ClientNick</strong> to the client to validate that the change is done.
-To all other users, a <strong>$Quit _old_nick</strong> will be sent and a <strong>$MyINFO $ALL</strong> of the user with the new nick.</p></div>
+To all other users, a <strong>$Quit</strong> will be sent and a <strong>$MyINFO</strong> of the user with the new nick.</p></div>
 <div class="paragraph"><p>If the user is an operator, <strong>$OpList</strong> will be updated appropriately as well.</p></div>
 </div>
 <div class="sect3">
@@ -3031,9 +3031,9 @@ The central point of the chat network is a single hub that collects chat message
 <div class="paragraph"><p>Add <strong>FeaturedNetworks</strong> to the <strong>$Supports</strong> to indicate support for this.</p></div>
 <div class="paragraph"><p>Syntax:</p></div>
 <div class="paragraph"><p>An APN MultiHubChat message normally has this format:</p></div>
-<div class="paragraph"><p><strong>&lt;(YYY)XXXXX&gt; MMMMMMM|</strong> - where YYY is the entry point prefix, XXXXX is the username and MMMMMMM is the message.</p></div>
+<div class="paragraph"><p>"&lt;(YYY)XXXXX&gt; MMMMMMM|" - where "YYY" is the entry point prefix, "XXXXX" is the username and "MMMMMMM" is the message.</p></div>
 <div class="paragraph"><p>To allow the different entry point handlers to identify which messages are coming from other multi hub chat entry points, there is a command send by the hub after login called <strong>$FeaturedNetworks</strong>:</p></div>
-<div class="paragraph"><p><strong>$FeaturedNetworks YYY$$YYY$YYY$$|</strong> - YYY stands for one entry point to the chat network.
+<div class="paragraph"><p>"$FeaturedNetworks YYY$$YYY$YYY$$|" - "YYY" stands for one entry point to the chat network.
 In the biggest currently running instance of the APN MultiHubChat system, five or more different prefixes are used.</p></div>
 <div class="sect4">
 <h5 id="_implementation">Implementation</h5>
@@ -3291,9 +3291,9 @@ cellspacing="0" cellpadding="4">
 </div>
 <div class="sect4">
 <h5 id="_escaping">Escaping</h5>
-<div class="paragraph"><p>Escaping of dollar and pipe is necessary for the <strong><em>command</strong> in _raw</em> mode.
+<div class="paragraph"><p>Escaping of dollar and pipe is necessary for the <strong>_command</strong> in <em>raw</em> mode.
 The DC++ escape sequence will be used.
-I.e. &#124; for pipe, &#36; for dollar and &amp; for the ampersand.
+I.e. "&amp;#124;" for pipe, "&amp;#36;" for dollar and "&amp;amp;" for the ampersand.
 Escaping is used for all fields before they are sent to the hub / shown to the user.
 As with all NMDC commands, they must be terminated by the pipe character.</p></div>
 </div>
@@ -3319,7 +3319,7 @@ It is legal to add text (after the space) before the pipe, but it won&#8217;t be
 </div></div>
 </div></div>
 <div class="paragraph"><p>Will add a raw menu item with title <strong>_title</strong> with command <strong>_raw</strong>.
-This command must end with a &#124;, if not it should be discarded.
+This command must end with a "&amp;#124;", if not it should be discarded.
 The raw command may be used to specify multiple commands to be sent to the hub.</p></div>
 </div>
 <div class="sect4">
@@ -3331,7 +3331,7 @@ The raw command may be used to specify multiple commands to be sent to the hub.<
 <pre><code>$UserCommand 2 _context _title$_raw|</code></pre>
 </div></div>
 </div></div>
-<div class="paragraph"><p>Is exactly the same as <em>raw</em>, except that the command should only be run once per <strong>%[nick]</strong>.
+<div class="paragraph"><p>Is exactly the same as <em>raw</em>, except that the command should only be run once per "%[nick]".
 This is to prevent the client from sending out more than one message that disconnects someone.
 Generally, this is only useful in the User-File context (e.g. viewing search results) where it is possible to select one user multiple times.</p></div>
 </div>
@@ -3365,7 +3365,7 @@ $UserCommand 255 1|</code></pre>
 <div class="sect3">
 <h4 id="_nohello">4.6.1. NoHello</h4>
 <div class="paragraph"><p>Contexts: Client &#8594; Hub</p></div>
-<div class="paragraph"><p>This indicates that the client doesn&#8217;t need either <strong>$Hello</strong> or* $NickList* to be sent to it when connecting to a hub.
+<div class="paragraph"><p>This indicates that the client doesn&#8217;t need either <strong>$Hello</strong> or <strong>$NickList</strong> to be sent to it when connecting to a hub.
 To populate its user list, a <strong>$MyINFO</strong> for each user is enough.
 <strong>$Hello</strong> is still accepted, for adding bots to the user list.
 DC++ still sends a <strong>$GetNickList</strong> to indicate that it is interested in the user list.
@@ -3490,7 +3490,7 @@ It has been found that <strong>$HubName</strong> can be sent pretty much at any 
 </li>
 <li>
 <p>
-<strong>$Supports</strong> are in the same format as in the client protocol; "$Supports &lt;feat1&gt; &lt;feat2&gt; &lt;feat3&gt;&#124;"
+<strong>$Supports</strong> are in the same format as in the client protocol; "$Supports &lt;feat1&gt; &lt;feat2&gt; &lt;feat3&gt;"
 </p>
 </li>
 </ul></div>
@@ -3529,17 +3529,17 @@ Let the hub decide if the account should be treated as a VIP, i.e. not increment
 <div class="ulist"><ul>
 <li>
 <p>
-$Lock
+<strong>$Lock</strong>
 </p>
 </li>
 <li>
 <p>
-$HubName
+<strong>$HubName</strong>
 </p>
 </li>
 <li>
 <p>
-$Supports
+<strong>$Supports</strong>
 </p>
 </li>
 </ul></div>
@@ -3548,17 +3548,17 @@ Authentication</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
-$GetPass
+<strong>$GetPass</strong>
 </p>
 </li>
 <li>
 <p>
-$BadPass
+<strong>$BadPass</strong>
 </p>
 </li>
 <li>
 <p>
-$ValidateDenide
+<strong>$ValidateDenide</strong>
 </p>
 </li>
 </ul></div>
@@ -3566,17 +3566,17 @@ $ValidateDenide
 <div class="ulist"><ul>
 <li>
 <p>
-$LogedIn
+<strong>$LogedIn</strong>
 </p>
 </li>
 <li>
 <p>
-$MyINFO
+<strong>$MyINFO</strong>
 </p>
 </li>
 <li>
 <p>
-$MyINFO stream
+<strong>$MyINFO</strong> stream
 </p>
 </li>
 </ul></div>
@@ -3584,32 +3584,32 @@ $MyINFO stream
 <div class="ulist"><ul>
 <li>
 <p>
-$To
+<strong>$To:</strong>
 </p>
 </li>
 <li>
 <p>
-$Search
+<strong>$Search</strong>
 </p>
 </li>
 <li>
 <p>
-$SR
+<strong>$SR</strong>
 </p>
 </li>
 <li>
 <p>
-$ConnectToMe
+<strong>$ConnectToMe</strong>
 </p>
 </li>
 <li>
 <p>
-$RevConnectToMe
+<strong>$RevConnectToMe</strong>
 </p>
 </li>
 <li>
 <p>
-$ForceMove
+<strong>$ForceMove</strong>
 </p>
 </li>
 </ul></div>
@@ -3619,12 +3619,12 @@ $ForceMove
 <div class="ulist"><ul>
 <li>
 <p>
-$Key
+<strong>$Key</strong>
 </p>
 </li>
 <li>
 <p>
-$Supports
+<strong>$Supports</strong>
 </p>
 </li>
 </ul></div>
@@ -3632,12 +3632,12 @@ $Supports
 <div class="ulist"><ul>
 <li>
 <p>
-$Version
+<strong>$Version</strong>
 </p>
 </li>
 <li>
 <p>
-$MyINFO
+<strong>$MyINFO</strong>
 </p>
 </li>
 </ul></div>
@@ -3645,7 +3645,7 @@ $MyINFO
 <div class="ulist"><ul>
 <li>
 <p>
-$MyPass
+<strong>$MyPass</strong>
 </p>
 </li>
 </ul></div>
@@ -3654,47 +3654,47 @@ Connected</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
-$GetNickList
+<strong>$GetNickList</strong>
 </p>
 </li>
 <li>
 <p>
-$MyINFO
+<strong>$MyINFO</strong>
 </p>
 </li>
 <li>
 <p>
-$To:
+<strong>$To:</strong>
 </p>
 </li>
 <li>
 <p>
-$Search
+<strong>$Search</strong>
 </p>
 </li>
 <li>
 <p>
-$SR
+<strong>$SR</strong>
 </p>
 </li>
 <li>
 <p>
-$ConnectToMe
+<strong>$ConnectToMe</strong>
 </p>
 </li>
 <li>
 <p>
-$RevConnectToMe
+<strong>$RevConnectToMe</strong>
 </p>
 </li>
 <li>
 <p>
-$Kick
+<strong>$Kick</strong>
 </p>
 </li>
 <li>
 <p>
-$OpForceMove
+<strong>$OpForceMove</strong>
 </p>
 </li>
 </ul></div>
@@ -3986,12 +3986,12 @@ This is a variation of the <strong>QuickList</strong> proposal that is easy to i
 <div class="sect3">
 <h4 id="_bzlist">4.6.13. BZList</h4>
 <div class="paragraph"><p>Signals support for BZip2 compressed file list instead of the Huffman encoded list that NMDC pioneered.
-The compressed file list is available for download under the name <strong>MyList.bz2</strong> instead of <strong>MyList.DcLst</strong> and <strong>files.xml.bz2</strong> instead of <strong>files.xml</strong>.</p></div>
+The compressed file list is available for download under the name "MyList.bz2" instead of "MyList.DcLst" and "files.xml.bz2" instead of "files.xml".</p></div>
 <div class="paragraph"><p>Add <strong>BZList</strong> to the <strong>$Supports</strong> to indicate support for this.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_chunk">4.6.14. CHUNK</h4>
-<div class="paragraph"><p>This is a protocol extension by Valknut that allows retrieval of sections of a file through a modified $Get syntax.
+<div class="paragraph"><p>This is a protocol extension by Valknut that allows retrieval of sections of a file through a modified <strong>$Get</strong> syntax.
 The syntax is:</p></div>
 <div class="exampleblock">
 <div class="content">
@@ -4018,11 +4018,10 @@ Feature allows you to track all the actions of the individual or all users benef
 <div class="paragraph"><p>This feature offers passwords to be salted and hashed, which means that passwords are no longer sent in plaintext.
 This adds "random data" to the <strong>$GetPass</strong> command.</p></div>
 <div class="paragraph"><p>The random data should be Base32 encoded.</p></div>
-<div class="paragraph"><p>The data that is sent back in the <strong>$MyPass</strong> shall be the password followed by the random data, passed through the Tiger algorithm and then encoded with Base32.
-I.e., base32( tiger_hash( password + data ) ).</p></div>
+<div class="paragraph"><p>The data that is sent back in the <strong>$MyPass</strong> shall be the password followed by the random data, passed through the Tiger algorithm and then encoded with Base32: "base32( tiger_hash( _password + _data ) )"</p></div>
 <div class="paragraph"><p>Add <strong>SaltPass</strong> to the <strong>$Supports</strong> to indicate support for this.</p></div>
 <div class="paragraph"><p>Note that the example below for <strong>$MyPass</strong> is not literal.</p></div>
-<div class="paragraph"><p>The algorithm here is a port from ADC&#8217;s GPA/PAS.</p></div>
+<div class="paragraph"><p>The algorithm here is a port from ADC <a href="https://dc-protocols.github.io/ADC.html#_gpa">GPA</a> and <a href="https://dc-protocols.github.io/ADC.html#_pas">PAS</a>.</p></div>
 <div class="paragraph"><p>Example:</p></div>
 <div class="exampleblock">
 <div class="content">
@@ -4051,7 +4050,7 @@ The hub should disconnect after it has received the <strong>$MyNick</strong> com
 Clients should use the same TCP and UDP ports for both IPv4 and IPv6 if both are supported.
 The connection mode (passive, active, SOCKS5) can be different.</p></div>
 <div class="paragraph"><p>The hub is required to set the IPv6 bit in the <strong>$MyINFO</strong> command.</p></div>
-<div class="paragraph"><p>The connection mode in the <strong>$MyINFO</strong> tag changes from "M:X" where X is the connection mode (A = Active, B = Passive, 5 = SOCKS5) to "M:XY" where X is the connection mode of IPv4 and Y is the connection mode of IPv6.
+<div class="paragraph"><p>The connection mode in the <strong>$MyINFO</strong> tag changes from "M:X" where "X" is the connection mode (A = active, P = passive, 5 = SOCKS5) to "M:XY" where "X" is the connection mode of IPv4 and "Y" is the connection mode of IPv6.
 If a client does not support IPv4 or the IPv4 check failed, the first character will be "N" for not supported.</p></div>
 <div class="paragraph"><p>Add <strong>IP64</strong> to the <strong>$Supports</strong> to indicate support for this.</p></div>
 <div class="paragraph"><p>A client that support IPv4 and IPv6 will only use one form when sending messages to a hub.
@@ -4066,7 +4065,7 @@ I.e., if a passive search request is sent with a IPv4 address, that search reque
 <h4 id="_tls">4.6.20. TLS</h4>
 <div class="paragraph"><p>Contexts: Client &#8594; Client</p></div>
 <div class="paragraph"><p>This feature is used to indicate support for TLS-encrypted client-client connections.
-This feature can be used in conjunction with NAT feature specified below.</p></div>
+This feature can be used in conjunction with <strong>NAT</strong> feature specified below.</p></div>
 <div class="paragraph"><p>Implementations shall add an "S" to the TLS port in a <strong>$ConnectToMe</strong>.</p></div>
 <div class="paragraph"><p>Add <strong>TLS</strong> to the <strong>$Supports</strong> to indicate support for this.</p></div>
 <div class="paragraph"><p>Example connection request:</p></div>
@@ -4289,7 +4288,7 @@ Client has a chance to automatically update its search interval settings for eac
 <div class="paragraph"><p><strong>Int</strong> and <strong>IntPas</strong> might be set to zero "0" - which means that user is actually allowed to search without time limit, and might be set to "-1" - which means that user is not allowed to use search at all due to low profile or any other kind of restrictions.</p></div>
 <div class="paragraph"><p>Meaning of this extension is to avoid extra search requests to the hub, which are not going to bring any search results to the user anyway.
 Atleast the user will know the reason of search results not appearing for him on a specific hub.</p></div>
-<div class="paragraph"><p>Add <strong>SearchRule</strong> to the $Supports to indicate support for this.</p></div>
+<div class="paragraph"><p>Add <strong>SearchRule</strong> to the <strong>$Supports</strong> to indicate support for this.</p></div>
 <div class="paragraph"><p>Hub softwares currently known to support this extension: Verlihub</p></div>
 </div>
 <div class="sect3">
@@ -4312,7 +4311,7 @@ Atleast the user will know the reason of search results not appearing for him on
 <pre><code>$MyHubURL hub.example.com:412|</code></pre>
 </div></div>
 </div></div>
-<div class="paragraph"><p>Client should not spend any resources on parsing the URL, it is enough to use the <em>getHubUrl()</em> method as is (see DC++ source).</p></div>
+<div class="paragraph"><p>Client should not spend any resources on parsing the URL, it is enough to use the "getHubUrl()" method as is (see DC++ source).</p></div>
 <div class="paragraph"><p>Meaning of this extension is to collect statistics about hub addresses being used in a hub by its users, and also to extend address checking functionality to redirect users to most preferable hub address or port.</p></div>
 <div class="paragraph"><p>The idea was also to implement <strong>$SetHubURL</strong> command to specify preferable hub address without need to reconnect to the hub, in case it was accessed from hub favorites list.
 We are hoping to finish this last part of the implementation very soon.</p></div>
@@ -4510,7 +4509,7 @@ cellspacing="0" cellpadding="4">
 <div id="footer">
 <div id="footer-text">
 Version 1.5<br />
-Last updated 2025-04-27 11:13:08 CEST
+Last updated 2025-04-27 11:56:43 CEST
 </div>
 </div>
 </body>
