@@ -736,7 +736,10 @@ asciidoc.install(4);
 <body class="article">
 <div id="header">
 <h1>ADC Extensions</h1>
-<span id="author">1.0.9, UNRELEASED</span><br />
+<span id="author">DC++ Team</span><br />
+<span id="email"><code>&lt;<a href="mailto:dcplusplus-devel@lists.sourceforge.net">dcplusplus-devel@lists.sourceforge.net</a>&gt;</code></span><br />
+<span id="revnumber">version 1.0.9,</span>
+<span id="revdate">2025-05-07</span>
 <div id="toc">
   <div id="toctitle">Table of Contents</div>
   <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
@@ -755,15 +758,30 @@ when they are mature and stable enough.</p></div>
 <h2 id="_version_history">2. Version history</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>The latest draft of the next version of this document as well as intermediate
-and older versions can be downloaded from
-$URL: <a href="https://github.com/dc-protocols/adc/blob/main/ADC-EXT.txt">https://github.com/dc-protocols/adc/blob/main/ADC-EXT.txt</a> $.</p></div>
-<div class="paragraph"><p>This version corresponds to $Revision: 125 $.</p></div>
+and older versions can be downloaded from:
+<a href="https://github.com/dc-protocols/adc/blob/main/ADC-EXT.txt">https://github.com/dc-protocols/adc/blob/main/ADC-EXT.txt</a></p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_version_1_0_9_unreleased">3. Version 1.0.9, UNRELEASED</h2>
+<h2 id="_version_1_0_9_2025_05_07">3. Version 1.0.9, 2025-05-07</h2>
 <div class="sectionbody">
+<div class="paragraph"><p>DC++ Team &lt;<a href="mailto:dcplusplus-devel@lists.sourceforge.net">dcplusplus-devel@lists.sourceforge.net</a>&gt;</p></div>
 <div class="ulist"><ul>
+<li>
+<p>
+Added implementation notes to BLOM
+</p>
+</li>
+<li>
+<p>
+Added <em>CCPM</em> extension for client to client private messages
+</p>
+</li>
+<li>
+<p>
+Editorial updates
+</p>
+</li>
 <li>
 <p>
 Clarified HH field in PING to be an ADC URL
@@ -1020,15 +1038,15 @@ Added <em>PING</em> extension for hub pingers.
 <h4 id="_general">4.1.1. General</h4>
 <div class="paragraph"><p>This extension adds Tiger tree hash support to the base protocol. It is
 intended to be used both for identifying files and for purposes such as CID
-generation and password negotiation</p></div>
+generation and password negotiation.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_tigr_for_shared_files">4.1.2. TIGR for shared files</h4>
 <div class="paragraph"><p>All files shared by TIGR supporting clients must have been hashed using Merkle
 Hash trees, as defined by
-<a href="http://web.archive.org/web/20080316033726/http://www.open-content.net/specs/draft-jchapweske-thex-02.html">http://web.archive.org/web/20080316033726/http://www.open-content.net/specs/draft-jchapweske-thex-02.html</a>.
+<a href="https://web.archive.org/web/20080316033726/http://www.open-content.net/specs/draft-jchapweske-thex-02.html">https://web.archive.org/web/20080316033726/http://www.open-content.net/specs/draft-jchapweske-thex-02.html</a>.
 The Tiger
-algorithm, as specified by <a href="http://www.cs.technion.ac.il/~biham/Reports/Tiger/">http://www.cs.technion.ac.il/~biham/Reports/Tiger/</a>,
+algorithm, as specified by <a href="https://biham.cs.technion.ac.il/Reports/Tiger/">https://biham.cs.technion.ac.il/Reports/Tiger/</a>,
 functions as the hash algorithm. A base segment size of 1024 bytes must be
 used when generating the tree, but clients may then discard parts of the tree
 as long as at least 7 levels are kept or a block granularity of 64 KiB is
@@ -1042,7 +1060,7 @@ text.</p></div>
 <div class="paragraph"><p>In the file list, each File element carries an additional attribute "TTH"
 containing the base32-encoded value of the Tiger tree root.</p></div>
 <div class="paragraph"><p>In the GET/GFI type, the full tree may be accessed using the "tthl" type.</p></div>
-<div class="paragraph"><p>"tthl" transfers send the largest set of leaves available) as a binary stream
+<div class="paragraph"><p>"tthl" transfers send the largest set of leaves available as a binary stream
 of leaf data, right-to-left, with no spacing in between them.  &lt;start_pos&gt;
 must be set to 0 and &lt;bytes&gt; to -1 when requesting the data.  &lt;bytes&gt; must
 contain the total binary size of the leaf stream in SND; by dividing this
@@ -1098,7 +1116,7 @@ share which contains "files.xml" compressed with bzip2 1.0.3+ (www.bzip.org).</p
 <div class="sect2">
 <h3 id="_zlib_compressed_communication">4.3. ZLIB - Compressed communication</h3>
 <div class="paragraph"><p>There are two variants of zlib support, FULL and GET, and only one should be
-used on a each communications channel set up.</p></div>
+used on each communications channel set up.</p></div>
 <div class="sect3">
 <h4 id="_zlib_full">4.3.1. ZLIB-FULL</h4>
 <div class="paragraph"><p>If, during SUP negotiation, a peer sends "ZLIF" in its support string, it must
@@ -1456,7 +1474,7 @@ cellspacing="0" cellpadding="4">
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">fileMN</p></td>
-<td align="left" valign="top"><p class="table">Specify magnet link. <a href="http://en.wikipedia.org/wiki/Magnet_link">Magnet links</a> are used to reference files across networks and applications. Clients may ignore parameters it does not understand, but are free to pass on the parameters to other programs.</p></td>
+<td align="left" valign="top"><p class="table">Specify magnet link. <a href="https://en.wikipedia.org/wiki/Magnet_link">Magnet links</a> are used to reference files across networks and applications. Clients may ignore parameters it does not understand, but are free to pass on the parameters to other programs.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1523,7 +1541,7 @@ cellspacing="0" cellpadding="4">
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">p</p></td>
-<td align="left" valign="top"><p class="table">Propability of a false positive</p></td>
+<td align="left" valign="top"><p class="table">Probability of a false positive</p></td>
 </tr>
 </tbody>
 </table>
@@ -1618,13 +1636,18 @@ cellspacing="0" cellpadding="4">
 <div class="sect4">
 <h5 id="_tiger">Tiger</h5>
 <div class="paragraph"><p>For TTH roots, b is 192 and a reasonable value for h is 24, giving a maximum k = 8 which means that m = 8 * n / ln 2 ≈ 11.5 * n. The required bandwidth then becomes 11.5 * n / 8 bytes, so approximately 1.44 bytes per file in the users share. For 20000 files, m should then be 230016 (taking into account the modulo 64 requirement), giving a p = 0.004, in other words ~99.6% of all searches that don&#8217;t match a users share would not be sent, saving valuable upload bandwidth for the hub. The client calculates i valid positions, if x is an array of bytes containing the hash of the file, on a little-endian machine, by doing pos = x[0+i*h/8] | (x[1+i*h/8] &lt;&lt; 8) | (x[2+i*h/8] &lt;&lt; 16) for i = [0;k). This is of course a special case where h % 8 = 0, the actual algorithm has to take into consideration values for h where the integer crosses byte boundaries.</p></div>
-<div class="paragraph"><p>For test vectors, see the <a href="http://www.adcportal.com/wiki/index.php/Talk:BLOM">ADC wiki talk page</a>.</p></div>
+<div class="paragraph"><p>For test vectors, see the <a href="https://adc.sourceforge.io/wiki/index.php/Talk:BLOM">ADC wiki talk page</a>.</p></div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_implementation_notes">4.8.8. Implementation notes</h4>
+<div class="paragraph"><p>Clients do not signal each atomic user update of the share using the SF flag. Instead, they tend to send a cumulative result of multiple updates in a timely fashion. However, an unambiguous summary of the number of hash additions and removals may result in a lack of an update signal. Therefore, hubs are recommended to look for and process INFs containing the SS flag as well, since an incoming SS flag (especially when not accompanied by an SF) may also indicate an update in the hashes, one that occurs without a change in the total number of files shared.</p></div>
+<div class="paragraph"><p>Clients shall strive to signal multiple share updates in an unambiguous manner, thus enabling hubs to request the most accurate and up-to-date version of the client&#8217;s bloom filter.</p></div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_natt_nat_traversal">4.9. NATT - NAT traversal</h3>
-<div class="paragraph"><p>NAT traversal allow two passive clients to connect to each other. This specification is based on the TCP hole punching algorithm described in <span class="footnote" id="_footnote_Peer-to-Peer Communication Across Network Address Translators"><br />[B. Ford and P. Srisuresh and and D. Kegel. "Peer-to-Peer Communication Across Network Address Translators". In USENIX Technical Conference 2005 - pages 179–192. Online version: <a href="http://www.brynosaurus.com/pub/net/p2pnat/">http://www.brynosaurus.com/pub/net/p2pnat/</a>]<br /></span>.</p></div>
+<div class="paragraph"><p>NAT traversal allow two passive clients to connect to each other. This specification is based on the TCP hole punching algorithm described in <span class="footnote" id="_footnote_Peer-to-Peer Communication Across Network Address Translators"><br />[B. Ford and P. Srisuresh and and D. Kegel. "Peer-to-Peer Communication Across Network Address Translators". In USENIX Technical Conference 2005 - pages 179–192. Online version: <a href="https://bford.info/pub/net/p2pnat/">https://bford.info/pub/net/p2pnat/</a>]<br /></span>.</p></div>
 <div class="paragraph"><p>If a client does not support TCP4 or TCP6, it will send an RCM to the client it is trying to connect to. If the other client also doesn&#8217;t support TCP4 (or TCP6 correspondingly), NAT traversal may instead be used. Signal NATT in the INF&#8217;s SU field.</p></div>
 <div class="paragraph"><p>Do note that the hub must forward I4 or I6 for respective clients' INF.</p></div>
 <div class="paragraph"><p>An endpoint is the tuple of IP and port. The "private endpoint port" refers to the outbound port to the connected hub, as seen by the client. Each client must listen for incoming connections on this port. Note that this protocol extension uses only this port for the TCP hole punching, the use of the "public endpoint port" as specified in <span class="footnoteref"><br /><a href="#_footnote_Peer-to-Peer Communication Across Network Address Translators">[Peer-to-Peer Communication Across Network Address Translators]</a><br /></span> is not supported.</p></div>
@@ -1766,7 +1789,7 @@ cellspacing="0" cellpadding="4">
 <div class="sect2">
 <h3 id="_lc_locale_specification">4.13. LC - Locale specification</h3>
 <div class="paragraph"><p>This extension&#8217;s purpose is to notify the hub which user locale the client is using as well as the default locale for the hub. This allows hubs to customize text sent to clients, depending on language, left-to-right or right-to-left and more. If the hub does not directly support the client&#8217;s locale, it should attempt to fall back to the same language group (e.g. hub supports en-US but not en-AU, so falls back to en-US), and if this is not available, then fall back to the hub&#8217;s own locale.</p></div>
-<div class="paragraph"><p><a href="http://tools.ietf.org/html/bcp47">BCP47</a> should be used as reference for locale structure.</p></div>
+<div class="paragraph"><p><a href="https://www.rfc-editor.org/info/bcp47">BCP47</a> should be used as reference for locale structure.</p></div>
 <div class="tableblock">
 <table rules="all"
 frame="border"
@@ -1959,7 +1982,7 @@ cellspacing="0" cellpadding="4">
 </div>
 <div class="sect2">
 <h3 id="_type_typing_notification">4.18. TYPE - Typing notification</h3>
-<div class="paragraph"><p>This extension adds a typing similar to Jabber&#8217;s <a href="http://www.xmpp.org/extensions/xep-0085.html">"Chat state notifications"</a>.</p></div>
+<div class="paragraph"><p>This extension adds a typing similar to Jabber&#8217;s <a href="https://xmpp.org/extensions/xep-0085.html">"Chat state notifications"</a>.</p></div>
 <div class="paragraph"><p>Signal TYPE in SUP and the INF&#8217;s SU field.</p></div>
 <div class="sect3">
 <h4 id="_tpn">4.18.1. TPN</h4>
@@ -2017,7 +2040,7 @@ cellspacing="0" cellpadding="4">
 </div>
 <div class="sect2">
 <h3 id="_feed_rss_feeds">4.19. FEED - RSS feeds</h3>
-<div class="paragraph"><p>The extension adds <a href="http://en.wikipedia.org/wiki/RSS">RSS feed</a> support.</p></div>
+<div class="paragraph"><p>The extension adds <a href="https://en.wikipedia.org/wiki/RSS">RSS feed</a> support.</p></div>
 <div class="paragraph"><p>Signal FEED in SUP and the INF&#8217;s SU field.</p></div>
 <div class="sect3">
 <h4 id="_rss">4.19.1. RSS</h4>
@@ -2684,13 +2707,40 @@ cellspacing="0" cellpadding="4">
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_ccpm_client_to_client_private_messages">4.33. CCPM - Client to client private messages</h3>
+<div class="paragraph"><p>This extension adds support for private messages in a client to client context. The extension adds support for the C-type for MSG, and uses the field "PM" in the (C-type) INF to signal that the connection should be used for private messages. Implementations supporting this extension must signal "CCPM" in the SU field of their hub-targeted INF.</p></div>
+<div class="paragraph"><p>Implementations should differentiate between a C-C transfer connection and a C-C private message connection, so as to allow transfers and chat at the same time. The initiating client should issue a secondary CTM/RCM sequence to deal with the other connection. Implementations shall disallow GET (and other file transfer commands) in the private message connection.</p></div>
+<div class="paragraph"><p>Implementations are strongly discouraged but may choose to allow private messages in unencrypted connections.</p></div>
+<div class="paragraph"><p>Implementations may choose for which users that are allowed to send them private messages, so as to avoid spam (e.g., only trusted users, hub operators etc may initiate a C-C private message).</p></div>
+<div class="paragraph"><p>Absence of the "PM" field from the (C-type) INF shall cause a disconnect of the connection (with an appropriate STA).</p></div>
+<div class="paragraph"><p>Implementations may decide what to do when the hub connection is lost during a private message connection.</p></div>
+<div class="paragraph"><p>Implementations should adhere to any requirements the DI field in the QUI command in BASE poses regarding non-file transfer connections. Further actions beyond that are up to implementations.</p></div>
+<div class="paragraph"><p>The same port may, but needn&#8217;t be, reused for a file transfer connection and a private message connection. Concurrent connections may be rendered unfeasible with extensions such as NATT.</p></div>
+<div class="paragraph"><p>The "PM" field of the MSG command should not be used in C-C private messages.</p></div>
+<div class="tableblock">
+<table rules="all"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col />
+<col />
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">PM</p></td>
+<td align="left" valign="top"><p class="table">Field in the CINF to denote that the connection should be used for private messages. The field&#8217;s value should be <em>1</em>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-04-12 08:19:22 CEST
+Version 1.0.9<br />
+Last updated 2025-05-08 16:51:38 CEST
 </div>
 </div>
 </body>

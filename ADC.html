@@ -736,7 +736,10 @@ asciidoc.install(4);
 <body class="article">
 <div id="header">
 <h1>ADC Protocol</h1>
-<span id="author">version 1.0.4, UNRELEASED</span><br />
+<span id="author">DC++ Team</span><br />
+<span id="email"><code>&lt;<a href="mailto:dcplusplus-devel@lists.sourceforge.net">dcplusplus-devel@lists.sourceforge.net</a>&gt;</code></span><br />
+<span id="revnumber">version 1.0.4,</span>
+<span id="revdate">2025-05-07</span>
 <div id="toc">
   <div id="toctitle">Table of Contents</div>
   <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
@@ -765,12 +768,17 @@ Connect idea through the Neo-Modus Direct Connect client / hub.</p></div>
 <h2 id="_version_history">2. Version history</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>The latest draft of the next version of this document as well as intermediate
-and older versions can be downloaded from
-$URL: <a href="https://github.com/dc-protocols/adc/blob/main/ADC.txt">https://github.com/dc-protocols/adc/blob/main/ADC.txt</a> $.
-This version corresponds to $Revision: 126 $.</p></div>
+and older versions can be downloaded from:
+<a href="https://github.com/dc-protocols/adc/blob/main/ADC.txt">https://github.com/dc-protocols/adc/blob/main/ADC.txt</a></p></div>
 <div class="sect2">
-<h3 id="_version_1_0_4_unreleased">2.1. Version 1.0.4, UNRELEASED</h3>
+<h3 id="_version_1_0_4_2025_05_07">2.1. Version 1.0.4, 2025-05-07</h3>
+<div class="paragraph"><p>DC++ Team &lt;<a href="mailto:dcplusplus-devel@lists.sourceforge.net">dcplusplus-devel@lists.sourceforge.net</a>&gt;</p></div>
 <div class="ulist"><ul>
+<li>
+<p>
+Editorial updates
+</p>
+</li>
 <li>
 <p>
 Separators in the command description for GET, GFI and SND are now explicit.
@@ -1120,7 +1128,7 @@ validate against the following XML schema:</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema"&gt;
   &lt;xs:simpleType name="base32Binary"&gt;
     &lt;xs:restriction base="xs:string"&gt;
       &lt;xs:pattern value="[A-Za-z2-7]+"&gt;&lt;/xs:pattern&gt;
@@ -2359,11 +2367,11 @@ cellspacing="0" cellpadding="4">
 <tbody>
 <tr>
 <td align="left" valign="top"><p class="table">DRES CCCC BBBB FN/share/linux/ubuntu.iso SI42 SL1 TO123456789 TRIPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII</p></td>
-<td align="left" valign="top"><p class="table">A RES that is sent from a client (through the hub) indicating a response with the file name "ubuntu.iso" (and its path within the share), where the file sise is 42 bytes. The token "123456789" is used. The TR field indicate the hash of the file (see the TIGR extension).</p></td>
+<td align="left" valign="top"><p class="table">A RES that is sent from a client (through the hub) indicating a response with the file name "ubuntu.iso" (and its path within the share), where the file size is 42 bytes. The token "123456789" is used. The TR field indicate the hash of the file (see the TIGR extension).</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">URES IPJJWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII TRIPPPWEPPPLCA3PF2ZCRRYO4F2ZX2EV2JMW2KCII FN/share/linux/ubuntu.iso SI42 TO123456789</p></td>
-<td align="left" valign="top"><p class="table">A RES that is sent from a client (via UDP) indicating a response with the file name "ubuntu.iso" (and its path within the share), where the file sise is 42 bytes. The token "123456789" is used. The TR field indicate the hash of the file (see the TIGR extension).</p></td>
+<td align="left" valign="top"><p class="table">A RES that is sent from a client (via UDP) indicating a response with the file name "ubuntu.iso" (and its path within the share), where the file size is 42 bytes. The token "123456789" is used. The TR field indicate the hash of the file (see the TIGR extension).</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">CRES FN/share/linux/ubuntu.iso SI42</p></td>
@@ -2395,7 +2403,7 @@ cellspacing="0" cellpadding="4">
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">ECTM BBBB CCCC ADC/0.5 6666 123456789</p></td>
-<td align="left" valign="top"><p class="table">A CTM that is sent from a client to another client indicating that it wants to have a client to client connection. The (fictional) protocol "ADC/1.0" is used. The port 6666 is used. The token is 123456789. The hub should send this to the target user (with SID CCCC) and to the originating party (with SID BBBB).</p></td>
+<td align="left" valign="top"><p class="table">A CTM that is sent from a client to another client indicating that it wants to have a client to client connection. The (fictional) protocol "ADC/0.5" is used. The port 6666 is used. The token is 123456789. The hub should send this to the target user (with SID CCCC) and to the originating party (with SID BBBB).</p></td>
 </tr>
 </tbody>
 </table>
@@ -2419,11 +2427,11 @@ cellspacing="0" cellpadding="4">
 <tbody>
 <tr>
 <td align="left" valign="top"><p class="table">DRCM BBBB CCCC ADC/1.0 123456789</p></td>
-<td align="left" valign="top"><p class="table">A RCM that is sent from a client to another client indicating that it wants to have a client to client connection. The protocol "ADC/1.0" is used. TThe token is 123456789. The hub should only send this to the target user (with SID CCCC).</p></td>
+<td align="left" valign="top"><p class="table">A RCM that is sent from a client to another client indicating that it wants to have a client to client connection. The protocol "ADC/1.0" is used. The token is 123456789. The hub should only send this to the target user (with SID CCCC).</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">ERCM BBBB CCCC ADC/0.5 123456789</p></td>
-<td align="left" valign="top"><p class="table">A RCM that is sent from a client to another client indicating that it wants to have a client to client connection. The (fictional) protocol "ADC/0.5" is used. TThe token is 123456789. The hub should send this to the target user (with SID CCCC) and to the originating party (with SID BBBB).</p></td>
+<td align="left" valign="top"><p class="table">A RCM that is sent from a client to another client indicating that it wants to have a client to client connection. The (fictional) protocol "ADC/0.5" is used. The token is 123456789. The hub should send this to the target user (with SID CCCC) and to the originating party (with SID BBBB).</p></td>
 </tr>
 </tbody>
 </table>
@@ -2653,7 +2661,8 @@ document that accompanies this one.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-04-12 08:25:10 CEST
+Version 1.0.4<br />
+Last updated 2025-05-08 16:46:34 CEST
 </div>
 </div>
 </body>
